@@ -2,9 +2,9 @@ import React from "react";
 import "./Loading.css";
 
 export enum LoadingType {
-  SPINNER = "spinner",
-  TEXT = "text",
-}
+    SPINNER = "spinner",
+    TEXT = "text",
+  }
 
 interface LoadingProps {
   type: LoadingType;

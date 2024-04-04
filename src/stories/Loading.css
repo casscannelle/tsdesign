@@ -18,6 +18,7 @@
   .loading-text {
     color: #3498db;
     font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   }
   
   @keyframes spin {
