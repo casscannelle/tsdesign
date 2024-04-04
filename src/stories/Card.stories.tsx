@@ -13,7 +13,7 @@ const imageCard: CardProps = {
 };
 
 export default {
-  title: "Card",
+  title: "Components/Card",
 };
 
 export const Text = () => <Card {...textCard} />;
