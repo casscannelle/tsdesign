@@ -16,7 +16,8 @@
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.14",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "utility-types": "^3.11.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.26",

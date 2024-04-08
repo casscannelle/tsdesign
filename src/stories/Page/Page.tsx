@@ -1,19 +1,22 @@
+//Read Only
+
 import React from 'react';
 
 import { Header } from '../Header/Header';
 import './page.css';
 
-type User = {
-  name: string;
+type ReadOnlyUser = {
+  readonly name: string;
 };
 
 export const Page: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
+  const [user, setUser] = React.useState<ReadOnlyUser | undefined>(undefined);
+  const headerUser = user? { name: user.name } : undefined;
 
   return (
     <article>
       <Header
-        user={user}
+        user={headerUser}
         onLogin={() => setUser({ name: 'Jane Doe' })}
         onLogout={() => setUser(undefined)}
         onCreateAccount={() => setUser({ name: 'Jane Doe' })}
