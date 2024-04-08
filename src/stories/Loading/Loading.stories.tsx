@@ -4,10 +4,13 @@ export default {
   title: "Components/Loading",
 };
 
-const SpinnerStory = () => <Loading type="spinner" />;
-export const Spinner = SpinnerStory.bind({});
+type TextStoryArgs = {
+  message: string;
+};
 
-const TextStory = (args: { message: string }) => <Loading type="text" message={args.message} />;
+const TextStory = (args: TextStoryArgs) => <Loading type="text" message={args.message} />;
+
+export const Spinner = () => <Loading type="spinner" />;
 export const Text = TextStory.bind({});
 Text.args = {
   message: "Carregando...",
