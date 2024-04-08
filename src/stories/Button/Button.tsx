@@ -1,3 +1,5 @@
+//Boolean type
+
 import './button.css';
 
 interface ButtonProps {
@@ -5,6 +7,10 @@ interface ButtonProps {
    * Is this the principal call to action on the page?
    */
   primary?: boolean;
+  /**
+   * Is the button disabled?
+   */
+  disabled?: boolean;
   /**
    * What background color to use
    */
@@ -28,17 +34,19 @@ interface ButtonProps {
  */
 export const Button = ({
   primary = false,
+  disabled = false,
   size = 'medium',
   backgroundColor,
   label,
-  ...props
+ ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={{ backgroundColor }}
+      disabled={disabled} 
       {...props}
     >
       {label}
