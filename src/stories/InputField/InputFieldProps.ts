@@ -1,8 +1,14 @@
+//intersection
 
-export interface InputFieldProps {
-    type?: string;
-    placeholder?: string;
-    value?: string;
-    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    fontWeight?: 'regular' | 'bold';
-  }
+type InputFieldPropsBase = {
+  type: string;
+  placeholder: string;
+  value: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+};
+
+type InputFieldPropsExtra = {
+  fontWeight?: 'bold' | 'normal';
+};
+
+export type InputFieldProps = InputFieldPropsBase & InputFieldPropsExtra;
