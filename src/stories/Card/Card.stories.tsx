@@ -12,15 +12,9 @@ const imageCard: CardProps = {
   description: "Card para texto e imagem",
 };
 
-const imageOnlyCard: CardProps = {
-  title: "Título",
-  imageSrc: "https://via.placeholder.com/300x200.png?text=Card+Image",
-};
-
 export default {
   title: "Components/Card",
 };
 
 export const Text = () => <Card {...textCard} />;
 export const Image = () => <Card {...imageCard} />;
-export const ImageOnly = () => <Card {...imageOnlyCard} />;

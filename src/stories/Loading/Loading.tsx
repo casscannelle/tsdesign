@@ -1,7 +1,9 @@
+//Alterado para tipo condicional
+
 import React from "react";
 import "./Loading.css";
 
-type LoadingType = "spinner" | "text"; //Alterado para tipo condicional
+type LoadingType = "spinner" | "text"; 
 
 interface LoadingProps {
   type: LoadingType;

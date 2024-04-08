@@ -1,15 +1,6 @@
 import React from "react";
 import "./Card.css";
-
-// Uso de type de interseção
-type CardProps = {
-  title: string;
-} & ({
-  description: string;
-} | {
-  imageSrc: string;
-  onClick: () => void;
-});
+import { CardProps } from "./CardProps";
 
 const Card: React.FC<CardProps> = (props) => {
   return (
